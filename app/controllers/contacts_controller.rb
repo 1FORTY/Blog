@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
   if @contact.valid?
     @contact.save
   else
-    render action: @contact
+    render action: 'new'
   end
 
   end
