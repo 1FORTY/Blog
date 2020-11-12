@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-  post 'contacts/create'
   get 'home/index'
 
+  resource :contacts, only: [:new, :create]
   resources :articles
 end

@@ -3,6 +3,6 @@ class ContactsController < ApplicationController
   end
 
   def create
-    render plain: params[:contacts].inspect
+    #render plain: params[:contact].inspect - Это нужно для проверки, ну, думаю, что этои так понятно
   end
 end
