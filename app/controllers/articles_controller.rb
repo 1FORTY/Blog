@@ -25,6 +25,18 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to action :edit
+      @article.save
+    end
+  end
+
   private
 
   def article_params
