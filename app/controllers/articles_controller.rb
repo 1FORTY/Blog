@@ -26,18 +26,19 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @article = Article.find(params[:id])
   end
 
   def update
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to action :edit
+      redirect_to action: 'edit'
       @article.save
     end
   end
 
-  def delete
+  def destroy
     @article = Article.find(params[:id])
     @article.destroy
 
